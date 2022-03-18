@@ -16,6 +16,6 @@ spec:
     spec: 
       containers:
         - name: second-node
-          image: c4rlosmonteiro/kub-first-app:2
+          image: c4rlosmonteiro/kub-first-app
         # - name: ...
         #   image: ...
