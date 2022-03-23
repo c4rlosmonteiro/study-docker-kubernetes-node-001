@@ -14,7 +14,10 @@ spec:
     spec:
       containers:
         - name: story
-          image: c4rlosmonteiro/kub-node-story-app
+          image: c4rlosmonteiro/kub-node-story-app:1
+          env: 
+            - name: STORY_FOLDER
+              value: 'story'
           volumeMounts:
             - mountPath: /app/story
               name: story-volume
