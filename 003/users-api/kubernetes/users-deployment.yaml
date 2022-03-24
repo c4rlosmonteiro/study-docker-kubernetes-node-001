@@ -1,0 +1,22 @@
+apiVersion: app/v1
+kind: Deployment
+metadata:
+  name: users-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: users
+  template:
+    metadata:
+      labels:
+        app: users
+    spec:
+      containers:
+        - name: users
+          image: c4rlosmonteiro/kub-node-task-users-app:latest
+          env:
+            - name: AUTH_ADDRESS
+              value: localhost
+        - name: auth
+          image: c4rlosmonteiro/kub-node-task-auth-app:latest

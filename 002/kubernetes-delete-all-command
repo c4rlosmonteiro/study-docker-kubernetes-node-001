@@ -1,0 +1,1 @@
+kubectl delete -f=deployment.yaml -f=environment.yaml -f=host-pvc.yaml -f=host-pv.yaml -f=service.yaml
