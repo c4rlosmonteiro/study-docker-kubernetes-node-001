@@ -5,7 +5,7 @@ services:
   users:
     build: ./users-api
     environment:
-      AUTH_ADDRESS: auth
+      AUTH_SERVICE_SERVICE_HOST: auth
     ports: 
       - "3000:3000"
   tasks:
